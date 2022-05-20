@@ -5,7 +5,6 @@ import { MaravillasService } from './maravillas.service';
 @Component({
     selector: 'app-maravillas',
     templateUrl: './maravillas.component.html',
-  
     styleUrls: ['./maravillas.component.css']
   })
   export class MaravillasComponent implements OnInit {
