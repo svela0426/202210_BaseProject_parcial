@@ -13,7 +13,7 @@ export class MaravillasService {
 
   constructor(private http: HttpClient) { }
 
-  getCourses(): Observable<Maravillas[]> {
+  getMaravillas(): Observable<Maravillas[]> {
     return this.http.get<Maravillas[]>(this.apiUrl);
   }
 }

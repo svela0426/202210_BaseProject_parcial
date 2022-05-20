@@ -1,31 +1,30 @@
-.grid-container{
-    display:grid ;
-    background-color: rgb(241, 240, 238) ;
-    grid-template-columns: auto auto auto auto auto auto auto;
-  
+.table{
+  width: 1000px;
+
+}
+
+
+
+.container-fluid{
+  display:grid ;
+  grid-template-columns: auto auto;
+
+}
+
+
+
+
+
+.first{
+  background-color:  rgb(79, 160, 181) ;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   }
-  
-  .grid-container p{
-  
-    background-color: rgb(232, 253, 232)   ;
-    color:  rgb(0, 0, 0);
-  }
-  
-  .grid-container div{
-  
-    background-color:  white   ;
-    color:  black;
-    font-display:  initial;
-  }
-  .card-img-top{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-   
-  }
-  
-  .card-text{
-    text-align: center;
-  
-  }
-  
+
+
+tbody td {
+  background-color:   rgb(242, 242, 242);
+  font-size: medium;  
+}
+
+
+tbody td:nth-child(2) {color: rgb(55, 26, 134);}

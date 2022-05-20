@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Maravillas } from './maravillas';
 import { MaravillasService } from './maravillas.service';
+import { MaravillasDetail } from './maravillas-detail';
+
 
 @Component({
     selector: 'app-maravillas',
@@ -10,25 +11,30 @@ import { MaravillasService } from './maravillas.service';
   export class MaravillasComponent implements OnInit {
 
     constructor(private maravillasService: MaravillasService) { }
-    maravillas: Array<Maravillas>=[];
-    pala:string="";
-     numero: number = 0;
+    maravillas : Array<MaravillasDetail> = [];
+
+    selectedMaravillas!: MaravillasDetail;
+    selected: Boolean = false;
   
-    getCourses() {
-      this.maravillasService.getCourses().subscribe(maravillas => {
-        this.maravillas = this.maravillas;
-        maravillas.forEach((maravilla) => this.pala = this.pala + maravilla.name);
-        this.pala=this.pala;
+  
+    getMaravillas() {
+      this.maravillasService.getMaravillas().subscribe(maravillas => {
+
+        this.maravillas = maravillas;
+
+        maravillas.sort((a,b) => a.country.localeCompare(b.country));
+
+        
       });
     }
-    gethola() {
-      return this.numero;
 
+    onSelected(maravilla: MaravillasDetail): void {
+      this.selected = true;
+      this.selectedMaravillas = maravilla;
     }
-
+  
 
     ngOnInit() {
-      this.getCourses();
-      this.gethola();
+      this.getMaravillas();
     }
   }

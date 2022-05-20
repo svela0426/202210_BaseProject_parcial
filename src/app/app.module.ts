@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { MaravillasModule } from './maravillas/maravillas.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MaravillasModule } from './maravillas/maravillas.module';
+
 
 
 
@@ -14,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     MaravillasModule,
     HttpClientModule
   ],

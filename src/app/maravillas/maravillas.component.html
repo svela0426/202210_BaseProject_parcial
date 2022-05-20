@@ -1,21 +1,25 @@
+<h2 class="titulo"> The seven Wonders</h2>
+
 <div class="container-fluid">
   <div class="col-6">
     <table class="table">
       <thead>
-        <h2 class="titulo">The seven wonders</h2>
+        
         <tr>
-          <th>id</th>
-          <th>name</th>
+          <th>id </th>
+          <th>name</th> 
           <th>country</th> 
+
         </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let c of maravillas">
+          <tr *ngFor="let c of maravillas" (click)="onSelected(c)">
+            <td>
+              <dd 
+              >{{c.id}}</dd>
+            </td>
               <td>
-                <dd class="nombre">{{c.id}}</dd>
-              </td>
-              <td>
-                <dd>{{c.name}}</dd>
+                <dd class="nombre">{{c.name}}</dd>
               </td>
               <td>
                 <dd>{{c.country}}</dd>
@@ -24,4 +28,19 @@
       </tbody>
     </table>
   </div>
+  <div class="col-9" *ngIf="selected">
+    <app-maravillas-detail [maravillasDetail]="selectedMaravillas"></app-maravillas-detail>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+  
+
+
