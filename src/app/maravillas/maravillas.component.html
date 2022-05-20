@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <h2 class="titulo">The seven wonders</h2>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>country</th> 
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let c of maravillas">
+              <td>
+                <dd class="nombre">{{c.id}}</dd>
+              </td>
+              <td>
+                <dd>{{c.name}}</dd>
+              </td>
+              <td>
+                <dd>{{c.country}}</dd>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
